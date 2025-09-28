@@ -10,8 +10,8 @@ function writeToDatabase(records) {
 
 async function importCsv(csvFilename) {
   const parser = csv.parse({ columns: true, delimiter: ',' }, async function (err, records) {
-    if (e) {
-      console.error('Error parsing CSV:', e);
+    if (err) {
+      console.error('Error parsing CSV:', err);
       return;
     }
     try {
